@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply bg-transparent px-0 input-bordered;
+  }
+  .input-bordered {
+    @apply border-0 border-b-[1px] rounded-none border-neutral-500;
+  }
+  .input:focus {
+    @apply border-primary-35 outline-none;
+  }
+  .textarea:focus {
+    @apply border-primary-35 outline-none;
+  }
+  .alert-error {
+    @apply bg-red-300 text-red-900;
+  }
+}
+
+.hero-content {
+  flex-direction: column;
+  align-items: start;
+  padding: 0;
+}
+
+#contacts-banner::after {
+  content: "";
+  @apply absolute -bottom-14 -right-14 w-48 h-48 rounded-full bg-white/10;
+}
+
+#contacts-banner::before {
+  content: "";
+  @apply absolute bottom-12 right-12 w-28 h-28 rounded-full bg-white/10;
+}
+.loading {
+  @apply flex items-center justify-center absolute top-0 left-0 right-0 bottom-0;
+}
